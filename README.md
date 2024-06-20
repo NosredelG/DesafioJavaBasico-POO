@@ -9,21 +9,34 @@ classDiagram
         +selecionarMusica(String musica) void
     }
 
+    class ReprodutorVideo {
+        <<interface>>
+        +iniciar() void
+        +pausar() void
+        +selecionarVideo(String video) void
+    }
+
     class AparelhoTelefonico {
         <<interface>>
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
+        +ligar(String numero) void
+        +selecionarContato(String contato) void
+        +atender() void
+        +iniciarCorreioVoz() void
     }
 
     class NavegadorInternet {
         <<interface>>
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
+        +exibirPagina(String url) void
+        +adicionarNovaAba() void
+        +atualizarPagina() void
     }
 
     class iPhone {
     }
 
     iPhone --> ReprodutorMusical
+    iPhone --> ReprodutorVideo
     iPhone --> AparelhoTelefonico
     iPhone --> NavegadorInternet
+
+  
